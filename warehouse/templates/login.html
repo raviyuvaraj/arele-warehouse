@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home Page
+{%endblock%}
+
+{% block content1%}
+<body >
+  <div class="container" style="text-align:center; padding : 100px 400px 100px 400px;">
+   <form method="POST" class="form-signin" style="color: white; ">
+     {{form.hidden_tag()}}
+     <h1 style="text-align: center; color: bisque;"> Login </h1><br><br>
+ 
+     {{ form.email.label()}}
+     {{ form.email(class="form-control", placeholder="E-mail") }}
+     {{ form.password.label()}}
+     {{ form.password(class="form-control", placeholder="Password") }}
+
+     <br>
+     {{ form.submit(class="btn btn-lg btn-primary")}}
+     
+   </form>
+ </div>
+ </body>
+{% endblock %}

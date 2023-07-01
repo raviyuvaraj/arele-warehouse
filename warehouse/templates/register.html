@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home Page
+{%endblock%}
+
+{% block content1%}
+<body >
+ <div class="container" style="text-align:center; padding : 100px 400px 100px 400px;">
+  <form method="POST" class="form-register" style="color: white; ">
+    {{form.hidden_tag()}}
+    <h1 style="text-align: center; color: bisque;">Sign Up</h1><br><br>
+    {{ form.first_name.label()}}
+    {{ form.first_name(class="form-control", placeholder="First Name") }}
+    {{ form.last_name.label()}}
+    {{ form.last_name(class="form-control", placeholder="Last Name") }}
+    {{ form.email.label()}}
+    {{ form.email(class="form-control", placeholder="E-mail") }}
+    {{ form.password.label()}}
+    {{ form.password(class="form-control", placeholder="Password") }}
+    {{ form.confirm_password.label()}}
+    {{ form.confirm_password(class="form-control", placeholder="Confirm Password") }}
+    <br>
+    {{ form.submit(class="btn btn-lg btn-primary")}}
+    
+  </form>
+</div>
+</body>
+{% endblock %}
